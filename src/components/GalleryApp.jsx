@@ -5,7 +5,7 @@ import { FaRegStar } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 function GalleryApp() {
-
+    
     const pics = [
         {
             img: "https://images.pexels.com/photos/36250884/pexels-photo-36250884.jpeg",
