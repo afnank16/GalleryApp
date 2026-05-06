@@ -3,6 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useState } from "react";
 import { FaRegStar } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { IoHome } from "react-icons/io5";
 
 function GalleryApp() {
 
@@ -84,6 +85,7 @@ function GalleryApp() {
                                     : "text-gray-700 hover:bg-gray-100/70 hover:text-blue-600"
                                 }`}
                         >
+                            <IoHome className="text-xl" />
                             Home
                         </a>
                     </li>
@@ -100,6 +102,7 @@ function GalleryApp() {
                                     : "text-gray-700 hover:bg-gray-100/70 hover:text-blue-600"
                                 }`}
                         >
+                            <FaRegStar className="text-xl" />
                             Favorites
                         </a>
                     </li>
@@ -234,8 +237,7 @@ function GalleryApp() {
                     >
                         {/* Refined Close Button */}
                         <button
-                            className="absolute -top-1 right-0 md:-right-12 text-white/70 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
-                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-2 right-2 md:-right-12 text-white bg-black/40 md:bg-transparent hover:text-white transition-colors p-3 rounded-full z-50"                            onClick={() => setSelectedImage(null)}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                         </button>
@@ -245,8 +247,7 @@ function GalleryApp() {
                             <img
                                 src={selectedImage}
                                 alt="Preview"
-                                className="w-full h-[95vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]"
-                            />
+                                className="w-full max-h-[80vh] md:max-h-[95vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]"                            />
                         </div>
                     </div>
                 </div>
