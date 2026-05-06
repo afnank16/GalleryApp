@@ -207,12 +207,12 @@ function GalleryApp() {
                                                 }}>
                                                 <RiDeleteBin6Line className="absolute z-10 pl-2 pt-2 text-white hover:text-red-500 transition-all" size={26} />
                                             </button>
-                                            <img
-                                                src={item.img}
-                                                alt=""
-                                                onClick={() => setSelectedImage(item.img)}
-                                                className="w-full h-80 object-cover transition duration-300 group-hover:scale-110"
-                                            />
+                                           <img
+                                            src={selectedImage}
+                                            alt="Preview"
+                                            onClick={() => setSelectedImage(null)}
+                                            className="w-full max-h-[80vh] md:max-h-[95vh] object-contain block"
+                                        />
                                         </div>
                                     ))
                                 )}
