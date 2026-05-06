@@ -5,7 +5,7 @@ import { FaRegStar } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 function GalleryApp() {
-    
+
     const pics = [
         {
             img: "https://images.pexels.com/photos/36250884/pexels-photo-36250884.jpeg",
@@ -245,7 +245,7 @@ function GalleryApp() {
                             <img
                                 src={selectedImage}
                                 alt="Preview"
-                                className="w-full h-[96vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]"
+                                className="w-full h-[95vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]"
                             />
                         </div>
                     </div>
