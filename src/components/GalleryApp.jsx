@@ -10,7 +10,7 @@ function GalleryApp() {
     const pics = [
         {
             img: "https://images.pexels.com/photos/36250884/pexels-photo-36250884.jpeg",
-            tags: ["building, river"]
+            tags: ["building"," river"]
         },
         {
             img: "https://images.pexels.com/photos/21352832/pexels-photo-21352832.jpeg",
@@ -114,24 +114,24 @@ function GalleryApp() {
 
                 {/* Navbar */}
                 <header className="flex justify-between items-center px-4 lg:px-8 py-4 bg-white/80 backdrop-blur-md border-b border-gray-100 fixed top-0 left-0 lg:left-60 right-0 z-10">                    <button
-                        className="lg:hidden mr-4"
-                        onClick={() => setSidebarOpen(true)}
+                    className="lg:hidden mr-4"
+                    onClick={() => setSidebarOpen(true)}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-7 w-7 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-7 w-7 text-gray-700"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
-                    </button>
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
                     {/* Title with a cleaner weight and tighter tracking */}
                     <h1 className="lg:text-2xl sm:text-xl font-semibold text-gray-800 tracking-tight">
                         Photo Gallery
@@ -181,6 +181,7 @@ function GalleryApp() {
                                                 />
                                             </button>
                                             <img
+                                                loading="lazy"
                                                 src={item.img}
                                                 alt=""
                                                 onClick={() => setSelectedImage(item.img)}
@@ -207,12 +208,12 @@ function GalleryApp() {
                                                 }}>
                                                 <RiDeleteBin6Line className="absolute z-10 pl-2 pt-2 text-white hover:text-red-500 transition-all" size={26} />
                                             </button>
-                                           <img
-                                            src={selectedImage}
-                                            alt="Preview"
-                                            onClick={() => setSelectedImage(null)}
-                                            className="w-full max-h-[80vh] md:max-h-[95vh] object-contain block"
-                                        />
+                                            <img
+                                                src={item.img}
+                                                alt="Favorite"
+                                                onClick={() => setSelectedImage(item.img)}
+                                                className="w-full h-80 object-cover transition duration-300 group-hover:scale-110"
+                                            />
                                         </div>
                                     ))
                                 )}
@@ -237,7 +238,7 @@ function GalleryApp() {
                     >
                         {/* Refined Close Button */}
                         <button
-                            className="absolute top-2 right-2 md:-right-12 text-white bg-black/40 md:bg-transparent hover:text-white transition-colors p-3 rounded-full z-50"                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-2 right-2 md:-right-12 text-white bg-black/40 md:bg-transparent hover:text-white transition-colors p-3 rounded-full z-50" onClick={() => setSelectedImage(null)}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                         </button>
@@ -247,7 +248,7 @@ function GalleryApp() {
                             <img
                                 src={selectedImage}
                                 alt="Preview"
-                                className="w-full max-h-[80vh] md:max-h-[95vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]"                            />
+                                className="w-full max-h-[80vh] md:max-h-[95vh] object-contain block transform transition-transform duration-500 hover:scale-[1.02]" />
                         </div>
                     </div>
                 </div>
