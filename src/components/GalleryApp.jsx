@@ -157,7 +157,7 @@ function GalleryApp() {
                 {/* Gallery */}
                 <div className="p-6">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {active === "home" && (
+                        {active === "home" && (//home section
                             <>
                                 {pics
                                     .filter(item =>
