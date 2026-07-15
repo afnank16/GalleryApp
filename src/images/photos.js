@@ -31,4 +31,8 @@ export const pics = [
             img: "https://images.pexels.com/photos/36327391/pexels-photo-36327391.jpeg",
             tags: ["building", "river", "island", "beauty"]
         },
+         {
+            img: "https://www.istockphoto.com/photo/twilight-at-spirit-island-gm485371557-38624866?searchscope=image%2Cfilm",
+            tags: ["river", "beauty","river","mountain"]
+        },
     ];
