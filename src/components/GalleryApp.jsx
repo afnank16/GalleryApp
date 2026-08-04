@@ -165,7 +165,7 @@ function GalleryApp() {
                                     </div>
                                 ) : (
                                     favorites.map((item, index) => (
-                                        <div key={index} className="rounded-xl overflow-hidden shadow group cursor-pointer">
+                                        <div key={index} className="relative rounded-xl overflow-hidden shadow group cursor-pointer">
                                             <button
                                                 className="absolute z-10 hover:cursor-pointer" onClick={() => {
                                                     setFavorites(prev => prev.filter(fav => fav.img !== item.img));
